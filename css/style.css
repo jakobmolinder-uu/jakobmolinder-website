@@ -19,22 +19,10 @@
   --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --maxw: 720px;
   --sidebar-w: 260px;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:      #14161a;
-    --surface: #20242b;
-    --text:    #e7e3db;
-    --muted:   #9d968b;
-    --accent:  #8fb6d6;
-    --accent-hover: #b3cfe6;
-    --rule:    #333840;
-    --tag-bg:  #23272e;
-    --tag-text:#b7b0a4;
-    --on-accent:#14161a;
-  }
-}
+/* Light theme only — always white background, regardless of the OS dark-mode setting. */
 
 /* ---------- reset / base ---------- */
 *, *::before, *::after { box-sizing: border-box; }

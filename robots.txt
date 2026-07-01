@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jakobmolinder.com/sitemap.xml
+Sitemap: https://jakobmolinder-uu.github.io/sitemap.xml

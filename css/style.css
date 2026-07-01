@@ -5,14 +5,14 @@
    ============================================================ */
 
 :root {
-  --bg:      #fbfaf7;
+  --bg:      #ffffff;
   --surface: #ffffff;
   --text:    #23201c;
   --muted:   #6d675e;
   --accent:  #34506b;
   --accent-hover: #223749;
-  --rule:    #e7e2d8;
-  --tag-bg:  #f1ece2;
+  --rule:    #e6e6e6;
+  --tag-bg:  #f4f4f4;
   --tag-text:#5a544b;
   --on-accent:#ffffff;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
@@ -81,8 +81,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
   position: sticky;
   top: 2rem;
   align-self: flex-start;
-  max-height: calc(100vh - 3rem);
-  overflow-y: auto;
   padding: 2.6rem 0 2rem;
 }
 .sidebar__photo {
@@ -174,13 +172,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
 .tags .label { color: var(--text); font-weight: 600; }
 
 /* persistent, subtle underline for in-prose links (nav/pills stay clean) */
-.lead a, .news a, .card a, .selected a, .contact-block a, .dataset p a {
+.lead a, .news a, .selected a, .contact-block a, .dataset p a {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
   text-decoration-color: var(--rule);
 }
-.lead a:hover, .news a:hover, .card a:hover, .selected a:hover,
+.lead a:hover, .news a:hover, .selected a:hover,
 .contact-block a:hover, .dataset p a:hover { text-decoration-color: var(--accent); }
 
 h1.page-title {
@@ -220,23 +218,6 @@ h1.page-title {
   padding-top: .05rem;
 }
 .news .what { font-size: .98rem; }
-
-/* featured card */
-.card {
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--accent);
-  border-radius: 10px;
-  padding: 1.3rem 1.4rem;
-}
-.card h3 {
-  font-family: var(--serif);
-  font-size: 1.12rem;
-  margin: 0 0 .5rem;
-  line-height: 1.3;
-}
-.card p { margin: .4rem 0 0; font-size: .96rem; color: var(--text); }
-.card .meta { font-size: .82rem; color: var(--muted); margin-top: .7rem; }
 
 /* publications */
 .pub-group { margin-top: 2.4rem; }

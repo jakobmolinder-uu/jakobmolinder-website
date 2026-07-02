@@ -6,18 +6,19 @@ Personal academic website for Jakob Molinder. Plain, static HTML + one CSS file.
 **Live at → https://jakobmolinder-uu.github.io** (free, hosted on GitHub Pages).
 
 ```
-index.html            Home (bio, research interests, news, featured project, selected pubs, UHILL)
+index.html            Home (bio, research interests, news, what I'm working on, selected pubs, UHILL)
 publications.html     Full publication list
 research.html         Current projects + working papers
-data.html             Public datasets (linked from Dropbox + SND)
+data.html             Public datasets (linked from Dropbox + SND), with suggested citations
 contact.html          Contact details
-404.html              Friendly not-found page
-css/style.css         All styling (light + dark mode, responsive sidebar layout)
+404.html              Friendly not-found page (root-absolute paths — works at any URL depth)
+publications/ data/ contact/ work-in-progress/
+                      Meta-refresh stubs so old WordPress-era URLs redirect to the new pages
+css/style.css         All styling (light theme only — white background, responsive sidebar layout)
 assets/img/           Photo + favicon/icons
 assets/cv.pdf         CV (replace anytime, keep the filename)
 .nojekyll             Tells GitHub Pages to serve files as-is (no Jekyll processing)
 sitemap.xml, robots.txt
-_headers, _redirects  Cloudflare-only (inert on GitHub Pages; kept for portability)
 ```
 
 ## How updates work (easy)
@@ -38,8 +39,10 @@ Or just ask **Claude Code** — *"add this new paper and a news item"*, *"update
 Maintenance notes:
 - The **sidebar** (photo, title, nav, links) is duplicated at the top of every page so the site
   needs zero JavaScript. Change a link → change it on all five pages (or ask Claude Code).
+- News items about papers should **link the paper** (journal DOI for published work, PDF for WPs).
 - Replace **`assets/cv.pdf`** with your latest CV (same filename) and the link just works.
 - Replace **`assets/img/jakob-molinder.jpg`** with a new portrait (~600–800 px, optimized).
+- Update the **"Last updated"** line in each page's footer when making content changes.
 
 ## Preview locally
 
@@ -53,11 +56,14 @@ python3 -m http.server 8000   # then open http://localhost:8000
 - Rebuilt from a paid WordPress.com site that had been partly hijacked with spam.
 - The old domain **jakobmolinder.com lapsed and was re-registered by a third party in Jan 2026**
   (WHOIS creation date 2026-01-06, privacy-protected, serving spam) — so it's no longer ours.
-  This site therefore lives on the GitHub Pages URL. If you ever reclaim/register a domain you
-  control, point its DNS at GitHub Pages (or Cloudflare Pages) and add a `CNAME` file here.
+  This site therefore lives on the GitHub Pages URL. If you ever register a domain you control,
+  point its DNS at GitHub Pages and add a `CNAME` file here.
+- A brief Cloudflare Pages deployment was abandoned in favor of GitHub Pages (July 2026).
 
 ## To confirm / finish
 
 - **ORCID iD** — add it to the sidebar links (all 5 pages) and the JSON-LD in `index.html`.
-- **"Malmsten" vs "Malmsteen"** Fellow spelling in the News item on `index.html`.
+- **"Malmsten" vs "Malmsteen"** Fellow spelling (news item currently removed pending confirmation).
 - **Lund email** — add to `contact.html` if you want it listed.
+- **New VR grant** (per UHILL site: Molinder, Ericsson & Andersson) — add as news item once
+  project name/year confirmed.
